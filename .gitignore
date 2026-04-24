@@ -36,3 +36,5 @@ ENV/
 # --- OS Specific ---
 .DS_Store
 Thumbs.db
+
+.env
