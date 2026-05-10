@@ -11,8 +11,8 @@ class MapboxlProvider:
     def __init__(self):
         self.api_token = os.environ.get("MAPBOX_ACCESS_TOKEN")
         if self.api_token is None:
-            raise ValueError("MAPBOX_ACCESS_TOKEN environment variable not set")
-
+            # raise ValueError("MAPBOX_ACCESS_TOKEN environment variable not set")
+            print("WARNING: MAPBOX_ACCESS_TOKEN is not set. Will still proceed, but not having this environment variable will cause Mapbox API calls to fail.")
 
 
     def get_target_image(self, sat_lon, sat_lat, sat_alt, target_lon, target_lat):
